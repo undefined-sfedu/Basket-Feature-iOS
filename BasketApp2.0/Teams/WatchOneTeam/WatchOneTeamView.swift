@@ -87,4 +87,17 @@ class WatchOneTeamView: UIViewController, UITableViewDelegate, UITableViewDataSo
     {
         self.view.frame.height / 14
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, success) in
+            self.presenter.deleteTeam(id: indexPath.section)
+            self.tableOfPlayers.reloadData()
+        }
+        
+        
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        swipe.performsFirstActionWithFullSwipe = false
+        return swipe
+    }
 }

@@ -14,7 +14,9 @@ class CreateTeamsView: UIViewController
     private var heightForFields: CGFloat = 0
     private var widthForFields: CGFloat = 0
     
-    private let teamNameLabel = UITextField()
+    private let teamNameTextField = UITextField()
+    private let sliderForCountOfPlayer = UISlider()
+    private var tableOfPlayers = UITableView()
     private let saveButton = UIButton()
 
         
@@ -22,22 +24,22 @@ class CreateTeamsView: UIViewController
     {
         super.viewDidLoad()
         
-        presenter.setView(view: self)
-        
+//        presenter.setView(view: self)
         setSizeVariables()
         setView()
-        presenter.setView(view: self)
+//        presenter.setView(view: self)
         
         
-        setTeamNameLabel()
+        setTeamNameField()
         setSaveButton()
         
-        for item in [teamNameLabel, saveButton]
+        for item in [teamNameTextField, saveButton]
         {
             self.view.addSubview(item)
         }
         
-        setPositionOfViews(ratioAndView: [1:teamNameLabel, 2.3:saveButton])
+//        setPositionOfViews(ratioAndView: [1:teamNameTextField, 2.3:saveButton])
+        setPositionOfViews(ratioAndView: [1:teamNameTextField, 2.3:sliderForCountOfPlayer, 3.6:tableOfPlayers, 4.9:saveButton])
     }
     
     private func setView()
@@ -73,7 +75,7 @@ class CreateTeamsView: UIViewController
     
     func alertAboutEmptyNameOfTeam()
     {
-        teamNameLabel.text = ""
+        teamNameTextField.text = ""
         let alert = UIAlertController(title: "Attention", message: "You didn't write name of team", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(ok)
@@ -84,12 +86,25 @@ class CreateTeamsView: UIViewController
         self.navigationController?.popViewController(animated: true)
     }
     
-    private func setTeamNameLabel()
+    private func setTeamNameField()
     {
-        self.teamNameLabel.layer.borderColor = UIColor.black.cgColor
-        self.teamNameLabel.layer.borderWidth = 1
-        self.teamNameLabel.placeholder = "Team name"
+        self.teamNameTextField.layer.borderColor = UIColor.black.cgColor
+        self.teamNameTextField.layer.borderWidth = 1
+        self.teamNameTextField.placeholder = "Team name"
     }
+    
+    private func setSlider()
+    {
+        self.sliderForCountOfPlayer.minimumValue = 5
+        self.sliderForCountOfPlayer.maximumValue = 15
+        self.sliderForCountOfPlayer.value = 5
+    }
+    
+//    private func setTableOfPlayer()
+//    {
+//        self.tableOfPlayers = UITableView(frame: <#T##CGRect#>, style: <#T##UITableView.Style#>)
+//    }
+    
     
     private func setSaveButton()
     {
@@ -103,7 +118,7 @@ class CreateTeamsView: UIViewController
     @objc private func saveTeamMethod(_ sender: UIButton)
     {
         
-        presenter.addTeam(nameOfTeam: teamNameLabel.text!)
+//        presenter.addTeam(nameOfTeam: teamNameTextField.text!)
     }
    
 }

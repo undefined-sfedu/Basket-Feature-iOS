@@ -16,14 +16,27 @@ class CreateTeamsPresenter
     }
     private let model = CreateTeamsModel()
     private var view = UIViewController()
-   
+    
     func setView(view: CreateTeamsView)
     {
         self.view = view
     }
-
-    func addTeam(nameOfTeam: String)
+    
+    func addTeam(nameOfTeam: String, players: inout [String])
     {
+        
+        var wrongPlayer = false
+        var changedItem  = ""
+        
+        for item in players
+        {
+            if item == "" || item == " "
+            {
+                wrongPlayer = true
+                break
+            }
+            
+        }
         
         if let newView = view as? CreateTeamsView
         {
@@ -31,10 +44,18 @@ class CreateTeamsPresenter
             {
                 newView.alertAboutEmptyNameOfTeam()
             }
+            
+            else if model.areThisTeamInMemory(name: nameOfTeam)
+            {
+                newView.alertAboutExistingTeam()
+            }
+            else if wrongPlayer
+            {
+                newView.alertAboutWrongPlayer()
+            }
             else
             {
-                model.createTeam(nameOfTeam: nameOfTeam)
-                
+                model.createTeam(nameOfTeam: nameOfTeam, players: &players)
                 newView.hideView()
             }
         }
@@ -54,6 +75,6 @@ class CreateTeamsPresenter
         }
         (changebleNameOfTeam.isEmpty ? (stateOfName = .empty) : (stateOfName = .okay))
         
-            return stateOfName
+        return stateOfName
     }
 }

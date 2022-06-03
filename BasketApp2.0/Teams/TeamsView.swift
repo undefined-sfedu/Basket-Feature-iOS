@@ -27,7 +27,6 @@ class TeamsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewWillAppear(animated)
         setView()
         tableOfTeams.reloadData()
-        self.tabBarController?.tabBar.isHidden = false
     }
     
     func setView()
@@ -36,7 +35,7 @@ class TeamsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "plus"), style: .plain, target: self, action: #selector(openViewOfCreatingTeams(_:)))
-        
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func setTableOfTeams()
@@ -88,4 +87,18 @@ class TeamsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.navigationController?.pushViewController(view, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, success) in
+            let cell = tableView.cellForRow(at: indexPath)
+            let name = cell?.textLabel!.text
+            self.presenter.deleteTeam(name: name!)
+            self.tableOfTeams.reloadData()
+        }
+        
+        
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        swipe.performsFirstActionWithFullSwipe = false
+        return swipe
+    }
 }

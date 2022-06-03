@@ -14,7 +14,7 @@ class Team: Codable
     
     private var players = [Player]()
     
-    enum typeOfInfoOfPlayer
+    enum TypeOfInfoOfPlayer
     {
         case name
         case number
@@ -43,7 +43,7 @@ class Team: Codable
         }
     }
     
-    func getInfoAboutPlayers(id: Int, typeOfInfo: typeOfInfoOfPlayer ) -> String
+    func getInfoAboutPlayers(id: Int, typeOfInfo: TypeOfInfoOfPlayer ) -> String
     {
         switch typeOfInfo
         {
@@ -64,6 +64,11 @@ class Team: Codable
     {
 //        self.players.append(newPlayer)
         self.players.insert(newPlayer, at: 0)
+    }
+    
+    func removePlayer(id: Int)
+    {
+        self.players.remove(at: id)
     }
     
 }

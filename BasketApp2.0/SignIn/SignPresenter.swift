@@ -24,7 +24,6 @@ class SignPresenter
     func getTabBarController() -> UITabBarController
     {
         let tabBar = RotationTabBarController()
-        
         let controllers = [RotationNavigationController(rootViewController: ProfileView()), RotationNavigationController(rootViewController: TeamsView()), RotationNavigationController(rootViewController: ListGameView())]
         let namesOfControllers = ["Profile", "Teams", "Games"]
        

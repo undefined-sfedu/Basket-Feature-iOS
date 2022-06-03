@@ -24,22 +24,24 @@ class CellWithTwoTitles: UITableViewCell
         self.contentView.addSubview(leftTitle)
         self.contentView.addSubview(rightTitle)
         
+        rightTitle.textAlignment = .center
         for item in [leftTitle, rightTitle]
         {
            
             item.snp.makeConstraints
             { maker in
                 maker.height.equalTo(self.contentView.frame.height * 0.9)
-                maker.centerY.equalTo(self.contentView)
+                maker.centerY.equalTo(self.contentView.center.y)
                 
+                maker.width.equalTo(self.contentView.frame.width * 0.5)
                 if item == leftTitle
                 {
-                    maker.width.equalTo(self.contentView.frame.width * 0.5)
+                    
                     maker.left.equalTo(10)
                 }
                 else
                 {
-                    maker.width.equalTo(self.contentView.frame.width * 0.2)
+                    maker.width.equalTo(self.contentView.frame.width * 0.5)
                     maker.right.equalTo(-10)
                 }
             }

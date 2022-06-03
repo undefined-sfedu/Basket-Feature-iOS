@@ -21,14 +21,21 @@ class RotationNavigationController: UINavigationController
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask
     {
-        return (visibleViewController is GameView) ? (.landscape) :(.portrait)
-//        return visibleViewController!.supportedInterfaceOrientations
+        if visibleViewController is GameView || visibleViewController is HistoryView
+        {
+            return .landscape
+        }
+        return .portrait
+//        return (visibleViewController is GameView) ? (.landscape) :(.portrait)
     }
     
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation
     {
+        if visibleViewController is GameView || visibleViewController is HistoryView
+        {
+            return .landscapeRight
+        }
         return (visibleViewController is GameView) ? (.landscapeRight) :(.portrait)
-//        return visibleViewController!.preferredInterfaceOrientationForPresentation
     }
 }
 
@@ -57,3 +64,31 @@ class RotationTabBarController: UITabBarController
     }
     
 }
+
+class RotationAlertController: UIAlertController
+{
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+    override var shouldAutorotate: Bool
+    {
+        
+        return true
+        
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask
+    {
+        return .landscapeRight
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation
+    {
+        return .landscapeRight
+    }
+    
+}
+
+

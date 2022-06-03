@@ -42,4 +42,17 @@ class WatchOneTeamModel
     {
         return team.accessToTeam!.accessToName
     }
+    
+    func deleteTeam(id: Int)
+    {
+        print(team.accessToTeam?.getNumOfPlayers)
+        try! realm.write
+        {
+            let newTeam = team.accessToTeam
+            newTeam?.removePlayer(id: id)
+            team.accessToTeam = newTeam
+        }
+//        team.accessToTeam!.removePlayer(id: id)
+        print(team.accessToTeam?.getNumOfPlayers)
+    }
 }

@@ -31,6 +31,9 @@ class WatchOneTeamPresenter
         return model.getNameOfTeam()
     }
     
-    
+    func deleteTeam(id: Int)
+    {
+        model.deleteTeam(id: id)
+    }
     
 }

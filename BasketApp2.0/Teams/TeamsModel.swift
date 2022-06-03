@@ -28,6 +28,19 @@ class TeamsModel
             let object = TeamForAddingPlayerRealm()
             object.accessToId = id
             realm.objects(TeamForAddingPlayerRealm.self).count == 0 ?(realm.add(object)) : (realm.objects(TeamForAddingPlayerRealm.self).first?.accessToId = id)
+            
         }
+    }
+    
+    func deleteTeam(name: String)
+    {
+        try! realm.write
+        {
+            for item in realm.objects(TeamRealm.self) where item.accessToTeam!.accessToName == name
+            {
+                realm.delete(item)
+            }
+        }
+        
     }
 }

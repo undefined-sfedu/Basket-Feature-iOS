@@ -25,4 +25,8 @@ class TeamsPresenter
     {
         model.saveTeamForAddingPLayer(id: id)
     }
+    func deleteTeam(name: String)
+    {
+        model.deleteTeam(name: name)
+    }
 }
