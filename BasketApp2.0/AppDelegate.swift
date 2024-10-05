@@ -35,11 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBar = RotationTabBarController()
         let controllers = [RotationNavigationController(rootViewController: TeamsView()), RotationNavigationController(rootViewController: ListGameView())]
         let namesOfControllers = ["Teams", "Games"]
+        let imageNamesOfControllers = ["person.3", "gamecontroller"]
         
         tabBar.setViewControllers(controllers, animated: true)
         for i in 0..<tabBar.tabBar.items!.count
         {
             tabBar.tabBar.items![i].title = namesOfControllers[i]
+            tabBar.tabBar.items![i].image = UIImage(systemName: imageNamesOfControllers[i])
         }
         
         

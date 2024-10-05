@@ -75,8 +75,9 @@ class WatchGameView: UIViewController, UICollectionViewDelegate, UICollectionVie
         field.snp.makeConstraints
         {
             make in
-            make.width.equalToSuperview()
-            make.height.equalTo(self.view.frame.width / 2)
+            let width = self.view.frame.width * 0.7
+            make.width.equalTo(width)
+            make.height.equalTo(width / 2)
             make.centerX.equalToSuperview()
             make.topMargin.equalTo(timeControl.snp.bottom).offset(15)
         }
@@ -121,9 +122,13 @@ class WatchGameView: UIViewController, UICollectionViewDelegate, UICollectionVie
             item.snp.makeConstraints
             {
                 make in
-                make.width.equalTo(self.view.frame.width / 2)
+                make.width.equalTo(self.view.frame.width / 2.2)
                 make.height.equalTo(self.view.frame.height / 14)
-                make.left.equalToSuperview().offset(20)
+                if item == teamAButton {
+                    make.left.equalToSuperview().offset(20)
+                } else {
+                    make.right.equalToSuperview().offset(-20)
+                }
                 
             }
             item.addTarget(self, action: #selector(setTeam(_:)), for: .touchDown)
@@ -160,9 +165,13 @@ class WatchGameView: UIViewController, UICollectionViewDelegate, UICollectionVie
             item.snp.makeConstraints
             {
                 make in
-                make.width.equalToSuperview()
-                make.left.equalTo(10)
+                make.width.equalTo(self.view.frame.width / 2.2)
                 make.height.equalTo(self.view.frame.height / 11)
+                if item == teamACollection {
+                    make.left.equalTo(10)
+                } else {
+                    make.right.equalTo(10)
+                }
             }
         }
     }
@@ -170,16 +179,21 @@ class WatchGameView: UIViewController, UICollectionViewDelegate, UICollectionVie
     private func setLayoutsOfViewOfTeams()
     {
         
-        let arr = [modeControl, teamAButton, teamACollection, teamBButton, teamBCollection]
+        let arrA = [modeControl, teamAButton, teamACollection]
+        let arrB = [modeControl, teamBButton, teamBCollection]
         
-        for i in 1...arr.count-1
-        {
-            arr[i].snp.makeConstraints
-            {
-                make in
-                make.topMargin.equalTo(arr[i-1].snp.bottom).offset(15)
+        for arr in [arrA, arrB] {
+            for i in 1..<arr.count {
+                arr[i].snp.makeConstraints {
+                    make in
+                    make.topMargin.equalTo(arr[i-1].snp.bottom).offset(15)
+                }
             }
         }
+        
+        
+        
+        
     }
     
     private func resetLastSelectedView(teamA: Bool?, player: String)
