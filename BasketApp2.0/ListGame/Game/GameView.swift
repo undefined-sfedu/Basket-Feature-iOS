@@ -32,27 +32,27 @@ class GameView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     //MARK: SET ORIENTATION
-    override var shouldAutorotate: Bool
-    {
-        return true
-    }
+//    override var shouldAutorotate: Bool
+//    {
+//        return true
+//    }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask
-    {
-        
-        return .landscape
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation
-    {
-        
-        return .landscapeRight
-    }
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask
+//    {
+//        
+//        return .landscape
+//    }
+//    
+//    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation
+//    {
+//        
+//        return .landscapeRight
+//    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+//        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
         self.height = min(self.view.frame.height, self.view.frame.width)
         self.width = max(self.view.frame.height, self.view.frame.width)
         view.backgroundColor = .white

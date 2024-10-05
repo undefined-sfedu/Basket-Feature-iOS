@@ -161,6 +161,15 @@ class GamePresenter
         {
             view.present(getAlert(), animated: true, completion: nil)
             
+            
+//            let alert = getAlert()
+//            
+//            view.present(alert, animated: true, completion: {() -> Void in
+//                alert.view.transform = CGAffineTransformMakeRotation(CGFloat(Double.pi / 2))
+//
+//            })
+            
+            
         }
         
     }
