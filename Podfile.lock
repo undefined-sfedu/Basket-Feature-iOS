@@ -1,0 +1,30 @@
+PODS:
+  - IQKeyboardManagerSwift (7.1.1)
+  - Realm (20.0.0):
+    - Realm/Headers (= 20.0.0)
+  - Realm/Headers (20.0.0)
+  - RealmSwift (20.0.0):
+    - Realm (= 20.0.0)
+  - SnapKit (5.7.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - RealmSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - Realm
+    - RealmSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: d7f3d3a562c237a0e7335e657cd598c452f57f1b
+  Realm: a799b5f9145623fb0bfe149fe81422863631dd0f
+  RealmSwift: f8c4354ebd5053343e6ab9f4eda244145308a51e
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+
+PODFILE CHECKSUM: 30199ea5d8764781300619107f04876833924867
+
+COCOAPODS: 1.15.2

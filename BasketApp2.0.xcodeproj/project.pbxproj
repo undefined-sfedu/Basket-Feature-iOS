@@ -36,16 +36,16 @@
 		F3593DC427BC074800FB769A /* CellToHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3593DC327BC074800FB769A /* CellToHistory.swift */; };
 		F35E25D32769C3D7003D3C54 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E25D22769C3D7003D3C54 /* Game.swift */; };
 		F35E25D52769C411003D3C54 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E25D42769C411003D3C54 /* Field.swift */; };
-		F36BE1902769CD780005902B /* ShowTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BE18F2769CD780005902B /* ShowTeamView.swift */; };
-		F36BE1932769D1EC0005902B /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BE1922769D1EC0005902B /* CreateGameView.swift */; };
-		F36BE1952769D2050005902B /* CreateGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BE1942769D2050005902B /* CreateGamePresenter.swift */; };
-		F36BE1972769D2090005902B /* CreateGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BE1962769D2090005902B /* CreateGameModel.swift */; };
 		F37AC5502766434D00022F82 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AC54F2766434D00022F82 /* Team.swift */; };
 		F37AC5522766437500022F82 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AC5512766437500022F82 /* Player.swift */; };
 		F37F648827BAB3D400B8C94E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F648727BAB3D400B8C94E /* HistoryView.swift */; };
 		F37F648A27BAB3E200B8C94E /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F648927BAB3E200B8C94E /* HistoryPresenter.swift */; };
 		F37F648C27BAB3EB00B8C94E /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F648B27BAB3EB00B8C94E /* HistoryModel.swift */; };
 		F38A8AAD27AC19FC006A5BD8 /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A8AAC27AC19FC006A5BD8 /* Zone.swift */; };
+		F3AC21B72CB12D1100D65CF0 /* CreateGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC21B42CB12D1100D65CF0 /* CreateGameModel.swift */; };
+		F3AC21B82CB12D1100D65CF0 /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC21B62CB12D1100D65CF0 /* CreateGameView.swift */; };
+		F3AC21B92CB12D1100D65CF0 /* CreateGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC21B52CB12D1100D65CF0 /* CreateGamePresenter.swift */; };
+		F3AC21BB2CB12D3500D65CF0 /* ShowTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC21BA2CB12D3500D65CF0 /* ShowTeamView.swift */; };
 		F3B8CE3727A7D9CC00306856 /* RotationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8CE3627A7D9CC00306856 /* RotationNavigationController.swift */; };
 		F3B9623A276B03E0009519EB /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B96239276B03E0009519EB /* GameView.swift */; };
 		F3B9623C276B0416009519EB /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9623B276B0416009519EB /* GamePresenter.swift */; };
@@ -99,16 +99,16 @@
 		F3593DC327BC074800FB769A /* CellToHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellToHistory.swift; sourceTree = "<group>"; };
 		F35E25D22769C3D7003D3C54 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F35E25D42769C411003D3C54 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
-		F36BE18F2769CD780005902B /* ShowTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTeamView.swift; sourceTree = "<group>"; };
-		F36BE1922769D1EC0005902B /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
-		F36BE1942769D2050005902B /* CreateGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGamePresenter.swift; sourceTree = "<group>"; };
-		F36BE1962769D2090005902B /* CreateGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameModel.swift; sourceTree = "<group>"; };
 		F37AC54F2766434D00022F82 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		F37AC5512766437500022F82 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F37F648727BAB3D400B8C94E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		F37F648927BAB3E200B8C94E /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		F37F648B27BAB3EB00B8C94E /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		F38A8AAC27AC19FC006A5BD8 /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
+		F3AC21B42CB12D1100D65CF0 /* CreateGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameModel.swift; sourceTree = "<group>"; };
+		F3AC21B52CB12D1100D65CF0 /* CreateGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGamePresenter.swift; sourceTree = "<group>"; };
+		F3AC21B62CB12D1100D65CF0 /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
+		F3AC21BA2CB12D3500D65CF0 /* ShowTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTeamView.swift; sourceTree = "<group>"; };
 		F3B8CE3627A7D9CC00306856 /* RotationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationNavigationController.swift; sourceTree = "<group>"; };
 		F3B96239276B03E0009519EB /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		F3B9623B276B0416009519EB /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
@@ -199,11 +199,14 @@
 		F3535ABA276B02D0003E250F /* ListGame */ = {
 			isa = PBXGroup;
 			children = (
+				F3AC21BA2CB12D3500D65CF0 /* ShowTeamView.swift */,
+				F3AC21B42CB12D1100D65CF0 /* CreateGameModel.swift */,
+				F3AC21B52CB12D1100D65CF0 /* CreateGamePresenter.swift */,
+				F3AC21B62CB12D1100D65CF0 /* CreateGameView.swift */,
 				F3535AB8276B01FB003E250F /* ListGameView.swift */,
 				F356749F275A705C001E6DB4 /* ListGamePresenter.swift */,
 				F35674A1275A7065001E6DB4 /* ListGameModel.swift */,
 				F3D26F3127D0906A00EC9530 /* WatchGame */,
-				F36BE1912769D1AA0005902B /* CreateGame */,
 				F3B96238276B03BC009519EB /* Game */,
 			);
 			path = ListGame;
@@ -267,17 +270,6 @@
 				F30027B8275904150084CE0E /* RegisterModel.swift */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		F36BE1912769D1AA0005902B /* CreateGame */ = {
-			isa = PBXGroup;
-			children = (
-				F36BE1922769D1EC0005902B /* CreateGameView.swift */,
-				F36BE1942769D2050005902B /* CreateGamePresenter.swift */,
-				F36BE1962769D2090005902B /* CreateGameModel.swift */,
-				F36BE18F2769CD780005902B /* ShowTeamView.swift */,
-			);
-			path = CreateGame;
 			sourceTree = "<group>";
 		};
 		F37F648627BAACA700B8C94E /* History */ = {
@@ -370,7 +362,7 @@
 				F30AF56B2757B859008B84C9 /* Sources */,
 				F30AF56C2757B859008B84C9 /* Frameworks */,
 				F30AF56D2757B859008B84C9 /* Resources */,
-				0CC1AEB2D9C583E306D6B995 /* [CP] Embed Pods Frameworks */,
+				7713803A50FF2FF452EC636F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,7 +420,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CC1AEB2D9C583E306D6B995 /* [CP] Embed Pods Frameworks */ = {
+		7713803A50FF2FF452EC636F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,9 +473,11 @@
 				F31C9E7D27F702890068AB51 /* StatisticsByZone.swift in Sources */,
 				F3593DC427BC074800FB769A /* CellToHistory.swift in Sources */,
 				F3535AB7276AFC3D003E250F /* Attack.swift in Sources */,
-				F36BE1952769D2050005902B /* CreateGamePresenter.swift in Sources */,
 				F3B9623E276B041D009519EB /* GameModel.swift in Sources */,
 				F30027B72759040B0084CE0E /* RegisterPresenter.swift in Sources */,
+				F3AC21B72CB12D1100D65CF0 /* CreateGameModel.swift in Sources */,
+				F3AC21B82CB12D1100D65CF0 /* CreateGameView.swift in Sources */,
+				F3AC21B92CB12D1100D65CF0 /* CreateGamePresenter.swift in Sources */,
 				F3567494275A63AE001E6DB4 /* TeamsView.swift in Sources */,
 				F3FBAE6E276729E900133484 /* WatchOneTeamPresenter.swift in Sources */,
 				F37AC5522766437500022F82 /* Player.swift in Sources */,
@@ -493,15 +487,14 @@
 				F37F648A27BAB3E200B8C94E /* HistoryPresenter.swift in Sources */,
 				F35E25D52769C411003D3C54 /* Field.swift in Sources */,
 				F306F9EB27685EC30043FFD0 /* AddPlayerPresenter.swift in Sources */,
-				F36BE1932769D1EC0005902B /* CreateGameView.swift in Sources */,
 				F3535AB9276B01FB003E250F /* ListGameView.swift in Sources */,
-				F36BE1902769CD780005902B /* ShowTeamView.swift in Sources */,
 				F3FBAE70276729F800133484 /* WatchOneTeamModel.swift in Sources */,
 				F37F648827BAB3D400B8C94E /* HistoryView.swift in Sources */,
 				F306F9ED27685ECB0043FFD0 /* AddPlayerModel.swift in Sources */,
 				F356748D275A5F6D001E6DB4 /* ProfileView.swift in Sources */,
 				F30AF5732757B859008B84C9 /* AppDelegate.swift in Sources */,
 				F3B9623C276B0416009519EB /* GamePresenter.swift in Sources */,
+				F3AC21BB2CB12D3500D65CF0 /* ShowTeamView.swift in Sources */,
 				F35674A0275A705C001E6DB4 /* ListGamePresenter.swift in Sources */,
 				F38A8AAD27AC19FC006A5BD8 /* Zone.swift in Sources */,
 				F3BB5EE127D64F9200F1969F /* WatchGamePresenter.swift in Sources */,
@@ -514,7 +507,6 @@
 				F30A546927B7A9130008178B /* CreateTeamsView2.swift in Sources */,
 				F356749B275A6FC8001E6DB4 /* TeamsModel.swift in Sources */,
 				F35E25D32769C3D7003D3C54 /* Game.swift in Sources */,
-				F36BE1972769D2090005902B /* CreateGameModel.swift in Sources */,
 				F3BB5EE727D657EF00F1969F /* NumOfPlayerCell.swift in Sources */,
 				F31C9E7B27F6FC9B0068AB51 /* CHCSVParser.m in Sources */,
 				F3C2BBF627663D6900243833 /* CreateTeamsModel.swift in Sources */,
